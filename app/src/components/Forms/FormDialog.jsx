@@ -5,6 +5,7 @@ import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 import DialogTitle from "@mui/material/DialogTitle";
 import { TextInput } from "./index";
+import {WEBHOOK_URL} from '../../webhookConfig'
 
 const FormDialog = (props) => {
   const [name, setName] = useState("");
@@ -37,10 +38,7 @@ const FormDialog = (props) => {
         description,
     };
 
-    // Webhook(Slack)
-    const url = "https://hooks.slack.com/services/<AAA>/<BBB>>";
-
-    fetch(url, {
+    fetch(WEBHOOK_URL, {
       method: "POST",
       body: JSON.stringify(payload),
     }).then(() => {
