@@ -28,5 +28,9 @@ module.exports = {
     "quotes": ["error", "double"],
     "import/no-unresolved": 0,
     "indent": ["error", 2],
+    // (TODO 10/28 Firebase deploy用) any型を許可
+    "@typescript-eslint/no-explicit-any": "off",
+    // (TODO 10/28 Firebase deploy用) 中括弧の内側にスペースを入れる
+    "object-curly-spacing": ["error", "always"],
   },
 };

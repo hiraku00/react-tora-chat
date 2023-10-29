@@ -13,6 +13,7 @@ const Chats = (props) => {
         padding: 0,
         overflow: "auto",
       }}
+      id={"scroll-area"}
     >
       {props.chats.map((chat, index) => {
         return (
